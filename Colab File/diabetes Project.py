@@ -30,7 +30,8 @@ df.describe()
 numeric_df = df.select_dtypes(include=[np.number])
 
 plt.figure(figsize=(10,6))
-sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm')
+sns.heatmap(numeric_df.corr(), annot=True, cmap='Blues')
+plt.title("Correlation Heatmap of Numerical Features")
 plt.show()
 
 sns.countplot(x='diabetes', data=df)
@@ -39,11 +40,12 @@ plt.show()
 
 
 # Data Pre Processing
-df = df.drop_duplicates()
-df.info()
-df.describe()
+df.isnull().sum()
 
-colmnsNumerical = ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level', 'hypertension', 'heart_disease']
+df = df.drop_duplicates() # Duplicates
+df.info()
+
+colmnsNumerical = ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level', 'hypertension', 'heart_disease'] # Missing Values
 for col in colmnsNumerical:
   df[col].fillna(df[col].median(), inplace=True)
 
@@ -54,21 +56,28 @@ for col in colmnsCatagorical:
 df.dropna(subset=['diabetes'], inplace=True)
 df['diabetes'] = df['diabetes'].astype(int)
 
-df.info()
-df.describe()
+df.isnull().sum()
+
+
+
+# Feature Distribution Analysis (Numerical)
+num_cols = ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level']
+
+df[num_cols].hist(figsize=(12,8), bins=30)
+plt.suptitle("Distribution of Numerical Features")
+plt.tight_layout()
+plt.show()
 
 
 
 # LabelEncoder (Gender is catagorical, we need 0/1/2 values for machine to understand, labelEncode does the thing by fitTransform)
+df.info()
+
 lE = LabelEncoder()
 df['gender'] = lE.fit_transform(df['gender'])
 df['smoking_history'] = lE.fit_transform(df['smoking_history'])
 
-df['diabetes'].value_counts().plot(kind='bar')
-plt.xlabel('Diabetes')
-plt.ylabel('Affected People')
-plt.title('Dibetes affected people & Non affected people')
-plt.show()
+df.info()
 
 
 
@@ -86,9 +95,9 @@ X_test = scaler.transform(X_test)
 # Model Training
 
   # Logistic Regression
-lr = LogisticRegression(max_iter=1000)
-lr.fit(X_train, y_train)
-lr_pred = lr.predict(X_test)
+# lr = LogisticRegression(max_iter=1000)
+# lr.fit(X_train, y_train)
+# lr_pred = lr.predict(X_test)
 
   # Decision Tree
 dt = DecisionTreeClassifier(max_depth=6)
@@ -96,9 +105,9 @@ dt.fit(X_train, y_train)
 dt_pred = dt.predict(X_test)
 
   # Naive Bayes
-nb = GaussianNB()
-nb.fit(X_train, y_train)
-nb_pred = nb.predict(X_test)
+# nb = GaussianNB()
+# nb.fit(X_train, y_train)
+# nb_pred = nb.predict(X_test)
 
   # KNN
 knn = KNeighborsClassifier(n_neighbors=5)
@@ -116,10 +125,10 @@ nn_pred = nn.predict(X_test)
 
   # Accuracy Bar Chart
 models_obj = {
-    "Logistic Regression": lr,
+    # "Logistic Regression": lr,
     "Decision Tree": dt,
     "KNN": knn,
-    "Naive Bayes": nb,
+    # "Naive Bayes": nb,
     "Neural Network": nn
 }
 results = {}
@@ -178,7 +187,24 @@ plt.show()
 num_cols = ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level']
 X_num = df[num_cols]
 
+# Scale
 X_scaled = StandardScaler().fit_transform(X_num)
+
+# Elbow
+wcss = []
+K = range(1, 11)
+
+for k in K:
+    kmeans = KMeans(n_clusters=k, random_state=42)
+    kmeans.fit(X_scaled)
+    wcss.append(kmeans.inertia_)
+
+plt.figure(figsize=(6,4))
+plt.plot(K, wcss, marker='o')
+plt.xlabel('Number of Clusters (k)')
+plt.ylabel('WCSS')
+plt.title('Elbow Method for Optimal k')
+plt.show()
 
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X_scaled)
