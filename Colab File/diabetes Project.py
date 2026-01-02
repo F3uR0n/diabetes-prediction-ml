@@ -6,7 +6,7 @@ import seaborn as sns
 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, roc_curve, auc
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, roc_curve, auc
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -151,6 +151,7 @@ for name, model in models_obj.items():
     print(name)
     print("Precision:", precision_score(y_test, pred))
     print("Recall:", recall_score(y_test, pred))
+    print("F1-score:", f1_score(y_test, pred))
     print("-"*40)
 
   # Confusion Matrix
