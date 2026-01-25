@@ -1,4 +1,4 @@
-# 🤖 Machine Learning Project (CSE422)
+# 🤖 Machine Learning Project
 
 This repository contains my **Machine Learning course project** for **CSE422**, focusing on applying core ML concepts to real-world data using Python.
 
@@ -58,12 +58,19 @@ This project was developed as part of an academic requirement and to strengthen 
 ## 📁 Project Structure
 
 ```
-cse422-machine-learning-project/
+diabetes-prediction-ml/
 │
-├── data/              # Dataset(s)
-├── notebooks/         # Jupyter notebooks
-├── models/            # Trained models (if any)
-├── results/           # Outputs, plots, metrics
+├── Colab File/
+│   └── CSE422_Lab_Project.ipynb
+│   └── diabetes Project.py
+│
+├── Dataset/
+│   └── diabetes_dataset.csv
+│
+├── Report/
+│   ├── Project_Report.pdf
+│   └── AI_Project_Report_Template.pdf
+│
 └── README.md
 ```
 
