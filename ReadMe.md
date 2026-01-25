@@ -32,26 +32,26 @@ This project was developed as part of an academic requirement and to strengthen 
 
 ## 🧠 **Machine Learning Concepts Used**
 
-* 📊 **Exploratory Data Analysis (EDA)** & **Correlation Analysis**
-* 🧹 **Data Preprocessing & Cleaning**
-* 🔢 **Label Encoding** & **Train–Test Split**
+* Exploratory Data Analysis (EDA) & Correlation Analysis
+* Data Preprocessing & Cleaning
+* Label Encoding & Train–Test Split
 
-* 🤖 **Supervised Learning Models**
+* Supervised Learning Models
   * **Decision Tree**
   * **K-Nearest Neighbors (KNN)**
   * **Neural Network**
 
-* 🌀 **Unsupervised Learning Model**
+* Unsupervised Learning Model
   * **K-Means** (used to analyze dataset behavior in an unsupervised setting)
 
-* 📈 **Model Evaluation Metrics**
+* Model Evaluation Metrics
   * **Accuracy**
   * **Precision**
   * **Recall**
   * **Confusion Matrix**
   * **ROC Curve & AUC Score**
 
-* ⚖️ **Overfitting Detection & Performance Analysis**
+* Overfitting Detection & Performance Analysis
 
 ---
 
