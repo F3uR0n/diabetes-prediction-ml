@@ -4,7 +4,6 @@ This repository contains my Machine Learning course project for CSE422, focused 
 
 The project demonstrates the full ML workflow, from data preprocessing to model training and evaluation.
 
----
 
 ## Project Overview
 
@@ -96,4 +95,4 @@ This project was built to:
 - Deploy as a web app or API
 
 
-If you find this project useful, consider giving it a star.
+## If you find this project useful, consider giving it a star.
