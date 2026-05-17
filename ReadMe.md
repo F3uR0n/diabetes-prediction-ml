@@ -1,61 +1,60 @@
-# 🤖 Machine Learning Project
+# Machine Learning Project
 
-This repository contains my **Machine Learning course project** for **CSE422**, focusing on applying core ML concepts to real-world data using Python.
+This repository contains my Machine Learning course project for CSE422, focused on applying core ML concepts to real-world data using Python.
 
-The project demonstrates the complete ML workflow — from data preprocessing to model training and evaluation.
-
----
-
-## 📌 Project Overview
-
-* Data loading and preprocessing
-* Feature selection and transformation
-* Model training and testing
-* Performance evaluation and analysis
-
-This project was developed as part of an academic requirement and to strengthen hands-on understanding of machine learning techniques.
+The project demonstrates the full ML workflow, from data preprocessing to model training and evaluation.
 
 ---
 
-## 🛠️ Tech Stack
+## Project Overview
 
-* **Language:** Python 🐍
-* **Libraries & Tools:**
+- Data loading and preprocessing
+- Feature selection and transformation
+- Model training and testing
+- Performance evaluation and analysis
 
-  * NumPy
-  * Pandas
-  * Matplotlib / Seaborn
-  * Scikit-learn
-  * Jupyter Notebook
+This work was developed to satisfy an academic requirement and to strengthen hands-on understanding of machine learning techniques.
 
 ---
 
-## 🧠 **Machine Learning Concepts Used**
+## Tech Stack
 
-* Exploratory Data Analysis (EDA) & Correlation Analysis
-* Data Preprocessing & Cleaning
-* Label Encoding & Train–Test Split
-
-* Supervised Learning Models
-  * **Decision Tree**
-  * **K-Nearest Neighbors (KNN)**
-  * **Neural Network**
-
-* Unsupervised Learning Model
-  * **K-Means** (used to analyze dataset behavior in an unsupervised setting)
-
-* Model Evaluation Metrics
-  * **Accuracy**
-  * **Precision**
-  * **Recall**
-  * **Confusion Matrix**
-  * **ROC Curve & AUC Score**
-
-* Overfitting Detection & Performance Analysis
+- Language: Python
+- Libraries and tools:
+  - NumPy
+  - Pandas
+  - Matplotlib / Seaborn
+  - Scikit-learn
+  - Jupyter Notebook
 
 ---
 
-## 📁 Project Structure
+## Machine Learning Concepts Used
+
+- Exploratory Data Analysis (EDA) and correlation analysis
+- Data preprocessing and cleaning
+- Label encoding and train-test split
+
+- Supervised learning models
+  - Decision Tree
+  - K-Nearest Neighbors (KNN)
+  - Neural Network
+
+- Unsupervised learning model
+  - K-Means (used to analyze dataset behavior in an unsupervised setting)
+
+- Model evaluation metrics
+  - Accuracy
+  - Precision
+  - Recall
+  - Confusion Matrix
+  - ROC Curve and AUC Score
+
+- Overfitting detection and performance analysis
+
+---
+
+## Project Structure
 
 ```
 diabetes-prediction-ml/
@@ -76,38 +75,38 @@ diabetes-prediction-ml/
 
 ---
 
-## 🎯 Purpose of This Project
+## Purpose of This Project
 
 This project was built to:
 
-* Apply **machine learning theory** in practice
-* Gain experience with **real datasets**
-* Understand **model performance and evaluation**
-* Strengthen ML fundamentals for future projects
+- Apply machine learning theory in practice
+- Gain experience with real datasets
+- Understand model performance and evaluation
+- Strengthen ML fundamentals for future projects
 
 ---
 
-## 🚧 Limitations
+## Limitations
 
-* Academic scope
-* No production deployment
-
----
-
-## 🌱 Future Improvements
-
-* Try additional ML models
-* Hyperparameter tuning
-* Cross-validation
-* Model comparison
-* Deploy as a web app or API
+- Academic scope
+- No production deployment
 
 ---
 
-## 📜 License
+## Future Improvements
 
-This project is intended for **educational and academic use**.
+- Try additional ML models
+- Hyperparameter tuning
+- Cross-validation
+- Model comparison
+- Deploy as a web app or API
 
 ---
 
-### ⭐ If you find this project useful, consider giving it a star!
+## License
+
+This project is intended for educational and academic use.
+
+---
+
+If you find this project useful, consider giving it a star.
