@@ -15,7 +15,6 @@ The project demonstrates the full ML workflow, from data preprocessing to model 
 
 This work was developed to satisfy an academic requirement and to strengthen hands-on understanding of machine learning techniques.
 
----
 
 ## Tech Stack
 
@@ -27,7 +26,6 @@ This work was developed to satisfy an academic requirement and to strengthen han
   - Scikit-learn
   - Jupyter Notebook
 
----
 
 ## Machine Learning Concepts Used
 
@@ -52,7 +50,6 @@ This work was developed to satisfy an academic requirement and to strengthen han
 
 - Overfitting detection and performance analysis
 
----
 
 ## Project Structure
 
@@ -73,7 +70,6 @@ diabetes-prediction-ml/
 └── README.md
 ```
 
----
 
 ## Purpose of This Project
 
@@ -84,14 +80,12 @@ This project was built to:
 - Understand model performance and evaluation
 - Strengthen ML fundamentals for future projects
 
----
 
 ## Limitations
 
 - Academic scope
 - No production deployment
 
----
 
 ## Future Improvements
 
@@ -101,12 +95,5 @@ This project was built to:
 - Model comparison
 - Deploy as a web app or API
 
----
-
-## License
-
-This project is intended for educational and academic use.
-
----
 
 If you find this project useful, consider giving it a star.
